@@ -1,0 +1,358 @@
+/* =========================================
+   GLOBAL FONTS
+   ========================================= */
+@font-face {
+    font-family: 'VistaaraCursive';
+    src: url('./fonts/Slight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'VistaaraClean';
+    src: url('./fonts/alta-regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VistaaraClean', Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    scroll-behavior: smooth;
+    background: linear-gradient(180deg, #ccad77 0%, #f1deca 50%, #ccad77 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+header {
+    display: flex;
+    background-color: #e4d3ae;
+    color: #8e7e5a;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    text-align: left;
+    padding: 15px 25px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.logo-main-text {
+    font-family: 'VistaaraCursive';
+    font-size: clamp(36px, 6vw, 46px);
+    color: #8b7a55;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.logo-sub-text {
+    font-family: 'VistaaraClean';
+    font-size: clamp(10px, 1.5vw, 12px);
+    color: #8b7a55;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-left: clamp(40px, 8vw, 100px);
+}
+
+/* =========================================
+   MAIN CONTENT WRAPPER
+   ========================================= */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* =========================================
+   CONSULTATION CONTAINER
+   ========================================= */
+.consultation-container {
+    display: flex;
+    background-color: #f5ebe0;
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* LEFT — image */
+.image-section {
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scaleX(-1);
+}
+
+/* RIGHT — form */
+.form-section {
+    flex: 1;
+    padding: clamp(24px, 4vw, 50px);
+    overflow-y: auto;
+}
+
+.form-section h1 {
+    font-family: 'VistaaraClean', Arial, sans-serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: normal;
+}
+
+/* =========================================
+   FORM ELEMENTS
+   ========================================= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Question labels updated to match your new premium subfont pairing */
+.form-group label.main-label {
+    display: block;
+    color: #555;
+    margin-bottom: 12px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-family: 'Gotham', 'Montserrat', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Optional: gives a clean, structured look matching the design */
+}
+
+/* Radio buttons */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #8b7a55;
+    font-family: 'Gotham', 'Montserrat', 'Helvetica Neue', sans-serif;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: clamp(12px, 1.8vw, 14px);
+    color: #333;
+    font-family: 'Gotham', 'Montserrat', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* Inputs, selects, textarea */
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Gotham', 'Montserrat', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+    background-color: #fff;
+}
+
+/* Placeholders */
+select::placeholder,
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Gotham', 'Montserrat', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    background-color: #fdf6e5;
+    border-color: #8b7a55;
+    color:#000
+}
+
+/* 2-column input grid */
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    color:black;  
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-btn {
+    font-family: 'VistaaraClean';
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #8b7a55;
+    border: 1px solid #8b7a55;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #8b7a55;
+    color: #ffffff;
+}
+
+.home-btn {
+    font-family: 'VistaaraClean';
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #8b7a55;
+    border: 1px solid #8b7a55;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.home-btn:hover {
+    background-color: #8b7a55;
+    color: #ffffff;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background: #e4d3ae;
+    color: #8b7a55;
+    text-align: center;
+    padding: 1.2rem;
+    font-family: 'VistaaraClean';
+    margin-top: auto;
+}
+
+.footer h3 {
+    font-family: 'VistaaraClean';
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-weight: normal;
+}
+
+/* =========================================
+   TABLET — up to 900px
+   ========================================= */
+@media (max-width: 900px) {
+    .image-section {
+        max-width: 40%;
+        min-width: 200px;
+    }
+}
+
+/* =========================================
+   MOBILE — up to 700px
+   ========================================= */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-content {
+        padding: 20px 12px;
+        align-items: flex-start;
+    }
+
+    .consultation-container {
+        flex-direction: column;
+        border-radius: 8px;
+    }
+
+    /* Image goes on top, shorter */
+    .image-section {
+        max-width: 100%;
+        min-width: unset;
+        height: 220px;
+    }
+
+    .form-section {
+        padding: 24px 18px;
+    }
+
+    /* Stack the 2-column grid to 1 column */
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .form-group label.main-label {
+        font-size: 14px;
+    }
+
+    .image-section {
+        height: 180px;
+    }
+}
